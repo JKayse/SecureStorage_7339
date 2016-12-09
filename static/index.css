@@ -1,0 +1,26 @@
+body {
+	background-color: aliceblue;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    float:left
+}
+
+header h1 {
+    float:left
+}
+
+select {
+    display:block
+}
+
+input {
+    display:block
+    margin-bottom: 5px;
+}
+
+section {
+    clear: both;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SecureStorage_7339</title>
+        <meta charset="utf-8">
+        <meta name="description" content="The application page.">
+        <link rel="stylesheet" type="text/css" href="static/index.css">
+    </head>
+    <body>
+        <header>
+        	<img src="static/cloud_key.png" alt="Logo" title="Logo">
+        	<h1>SecureStorage_7339</h1>
+        </header>
+        <main>
+            <section id="function">
+                <div id = "apis">
+                    <h2>Add an API (or change the API):</h2>
+                    <form id="addGoogleDrive" name = "googleDrive" action="" method=post>
+                        <input type="hidden" name="type" value="google">
+                        <input class="button" type="submit" value="Add Google Drive API">
+                    </form>
+                    <form id="addDropBox" name = "dropbox" action="" method=post>
+                        <input type="hidden" name="type" value="dropbox">
+                        <input class="button" type="submit" value="Add Drop Box API">
+                    </form>
+                    <form id="addBox" name = "box" action="" method=post>
+                        <input type="hidden" name="type" value="box">
+                        <input class="button" type="submit" value="Add Box API">
+                    </form>
+                </div>
+	            <div id = "uploadfile">
+                    <form id="uploadArea" name = "upload" action="" method=post enctype=multipart/form-data>
+				    	<h2>Upload a new file to one of the following servers:</h2>
+                        <input type="hidden" name="type" value="upload">
+				        <select name=api>
+                            <option value="0">Google Drive</option>
+                            <option value="1">DropBox</option>
+                            <option value="2">Box</option>
+                            <option value="3">Local</option>
+                        </select>
+                        <input type="file" name="file" required>
+                        <input class="button" type="submit" value="Upload">
+				    </form>
+				</div>
+                <div id = "downloadfile">
+                    <form id="downloadArea" name = "download" action="" method=post>
+                        <h2>Download a new file using the list below:</h2>
+                        <input type="hidden" name="type" value="download">
+                        <select name=files>
+                        {% for file in file_list %}
+                            <option value="{{ file.api }}/{{ file.name }}">{{ file.name }}</option>
+                        {% endfor %}
+                        </select>
+                        <input class="button" type="submit" value="Download">
+                    </form>
+                </div>
+				<div id = "leavePage">
+                    <form id="signOutArea" action=/logout method=get>
+                        <h2>Finished? Don't forget to sign out!</h2>
+                        <input class="button" type="submit" value="Sign Out">
+                    </form>
+				</div>
+            </section>      
+        </main>
+    </body>
+</html>

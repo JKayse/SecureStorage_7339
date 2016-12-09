@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SecureStorage_7339</title>
+        <meta charset="utf-8">
+        <meta name="description" content="The application page.">
+        <link rel="stylesheet" type="text/css" href="static/index.css">
+    </head>
+    <body>
+        <header>
+            <img src="static/cloud_key.png" alt="Logo" title="Logo">
+            <h1>SecureStorage_7339</h1>
+        </header>
+        <main>
+            <section id="description">
+                <div id="aboutSecureStorage">
+                    <h2>What is SecureStorage_7339?</h2>
+                    <p>
+                        Today, everything is stored on the cloud for easy access. This can make some nervous about the security of the files they add to cloud servers. SecureStorage_7339 will fix this by encryption everything that you add onto DropBox, Box, GoogleDrive and even our personal server. The simple user interface design makes our app easy to use and safe.
+                    </p>
+                </div>
+            </section>
+            <section id="loginregistration">
+                <div id = "signIn">
+                    <form id="signInArea" name = "signIn" action = "" method = "post">
+                        <h2>Login</h2>
+                        <input type="hidden" name="type" value="signIn">
+                        <input id="signInUsername" type="text" name="username" placeholder="Username" title="Must be a valid username." required>
+                        <input id="signInPass" type="password" name="password" placeholder="Password" title="Must be at valid password" required>
+                        <input class="button" type="submit" value="Sign In">
+                        <div class="error" id="signInError"></div>
+                    </form>
+                </div>
+                <div id = "signUp">
+                    <form id="signUpArea" name = "signUp" action = "" method = "post">
+                        <h2>Don't have an account? Register Now!</h2>
+                        <input type="hidden" name="type" value="signUp">
+                        <input id="signUpUsername" type="text" name="username" placeholder="Username" title="Must be a valid username." required>
+                        <input id="signUpPass" type="password" name="password" placeholder="Password" title="Must be at valid password" required>
+                        <input class="button" type="submit" value="Sign Up">
+                        <div class="error" id="signUpError"></div>
+                    </form>
+                </div>
+            </section>      
+        </main>
+    </body>
+</html>
